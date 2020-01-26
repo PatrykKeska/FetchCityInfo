@@ -8,8 +8,6 @@ const fetchData = async ()=> {
     .then((response) => { 
         return response.json()
     }).then((data)=> cities.push(...data))
-    
-    
 }
 
 
@@ -17,8 +15,7 @@ const fetchData = async ()=> {
 
 const handleInput = (e) => { 
     const txt = e.target.value;
-    const capitalLetters = txt.charAt(0).toUpperCase() + txt.substring(1);                                                                                                                                                                                                                                                              
-    
+    const capitalLetters = txt.charAt(0).toUpperCase() + txt.substring(1);
     typedCity = cities.filter(item => item.city.includes(capitalLetters)); 
     
 }
@@ -28,9 +25,8 @@ const handleInput = (e) => {
 
 const  handleData =  () => { 
     let right = [...typedCity]; 
-    right =  right.map(item => `<li class="city">${item.city}</li>`).toString().split(',').join("")
+    right =  right.map(item => `<li class="city">${item.city} - ${item.state} - ${item.population}</li>`).toString().split(',').join("")
     CityList.innerHTML = right
-    
 }
 
 

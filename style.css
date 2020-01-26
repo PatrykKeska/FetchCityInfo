@@ -13,6 +13,12 @@ html {
     font-size: 1.2em;
 }
 
+.head-tittle { 
+    font-size: 1em;
+    color: whitesmoke;
+    margin-top: 5vh;
+    margin-bottom: 5px; 
+}
 .wrapper { 
     display: flex;
     flex-direction: column;
@@ -29,19 +35,30 @@ html {
     text-decoration: none;
     list-style: none;
     background-color: white;
-    padding: 5px 10px;
+    padding: 2px 5px;
     border: 2px solid rgb(194, 189, 189);
-    min-width: 60%;
+    Width : 90%; 
+    max-width: 300px; 
+    font-size: .8em;
+    padding: 15px 5px;
     
 }
 
+@media(min-width: 700px){ 
+ .city { 
+     font-size: 1em;
+     max-width: 400px;
+ }
+
+}
+
 .city:nth-child(odd){ 
-    transform:translate3d(0, 0 ,-525px)perspective(100px)rotateX(10deg); 
+    transform:translate3d(0,-2.5px,-525px)perspective(100px)rotateX(8deg); 
     background-color: rgb(255, 255, 255);
 }
 
 .city:nth-child(even){ 
-    transform:translate3d(0, 2px ,-525px)perspective(100px)rotateX(-10deg);
+    transform:translate3d(0,0px,-525px)perspective(100px)rotateX(-8deg);
      
 }
 
@@ -54,18 +71,19 @@ min-width: 250px;
     border: 5px solid rgb(182, 180, 180);
     border-radius: 10px;
     font-size: 1.1em;
+    font-family: 'Bangers', cursive;
     
 }
 
 .cityList {
     width : 100% ; 
-    margin: 5vh 0;
+    margin: 0 ; 
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1.1em;
+
     
 }
