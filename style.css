@@ -1,6 +1,7 @@
 * { 
     box-sizing: border-box;
     margin: 0;
+
     
 }
 
@@ -14,8 +15,9 @@ html {
 
 .wrapper { 
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     width: 100vw;
     min-height: 100vh;
     background-color: rgb(224, 177, 20);
@@ -23,12 +25,47 @@ html {
 
 }
 
+.city { 
+    text-decoration: none;
+    list-style: none;
+    background-color: white;
+    padding: 5px 10px;
+    border: 2px solid rgb(194, 189, 189);
+    min-width: 60%;
+    
+}
+
+.city:nth-child(odd){ 
+    transform:translate3d(0, 0 ,-525px)perspective(100px)rotateX(10deg); 
+    background-color: rgb(255, 255, 255);
+}
+
+.city:nth-child(even){ 
+    transform:translate3d(0, 2px ,-525px)perspective(100px)rotateX(-10deg);
+     
+}
+
 .searchCity { 
 text-align: center;
-min-width: 200px;
+min-width: 250px;
     width: 20vw;
     height: 5vh;
-    padding: 5px 5px;
+    padding: 20px 5px;
     border: 5px solid rgb(182, 180, 180);
     border-radius: 10px;
+    font-size: 1.1em;
+    
+}
+
+.cityList {
+    width : 100% ; 
+    margin: 5vh 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.1em;
+    
 }
